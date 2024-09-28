@@ -12,8 +12,8 @@ inputFields.forEach((input) => {
     // console.log(input.value);
 
    input.addEventListener("input", () => {
-    console.log(input.id);
-        
+        // console.log(input.id);
+        input.classList.add('input-border');
         filledInputFields = [...inputFields].every((input) => {
             //    console.log(input.value);
             return input.value;

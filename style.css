@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 100%, 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main{
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    display: grid;   
+}
+.text-container{
+    align-self: center;
+}
+
+.white{
+    color: #ffff;
+}
+.form{
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #ffff;
+    border-radius: 0.7rem;
+    padding: 2rem;
+    box-shadow: 0 0.5em 0 0 #0505051c;
+
+}
+.try{
+    padding-block: 1em;
+    border-radius: 0.2rem;
+    background-color:  hsl(248, 32%, 49%);
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 0.5em 0 0 #0505051c;
+    margin-bottom: 2rem;
+}
+.try span{
+    font-weight: normal;
+    color: #ffffffb5;
+
+}
+.form input{
+    padding-block: 1em;
+    padding-inline: 1rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    outline: none;
+    border: 0.1rem solid #000;
+    width: 100%;
+}
+button{
+    display: block;
+    text-decoration: none;
+    background-color: hsl(154, 59%, 51%);
+    padding-block: 1em;
+    border-radius: 0.2rem;
+    text-align: center;
+    color: #ffff;
+    font-weight: 700;
+    margin-bottom: 0;
+    border: none;
+    border-bottom:3px solid hsl(154, 60%, 36%);
+}
+button:hover{
+    background-color: hsla(154, 59%, 51%, 0.781);
+    cursor: pointer;
+
+}
+
+.placeholder  input::placeholder{
+   visibility: hidden;
+}
+
+.form-p{
+    font-size: 0.75rem;
+    margin-top: 0;
+}
+.form-p span{
+    color: hsl(0, 100%, 74%) ;
+}
+.First-Name,.Last-Name,.Email-address,.password{
+    position: relative;
+}
+
+.icon-error{
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+    display: none;
+}
+.error{
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    color: hsl(0, 100%, 74%);
+    font-size: 0.65rem;
+    font-weight: 600;
+    display: none;
+}
+
+.uncompleted .icon-error,.uncompleted .error{
+    display: block;
+}
+
+.uncompleted .error-input{
+border: 0.1rem solid  hsl(0, 100%, 74%);
+}
+
+@media(min-width:679px){
+    body{
+        background-image: url(./intro-component-with-signup-form-master/images/bg-intro-desktop.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+    .container{
+        grid-template-columns: auto auto;
+        gap: 2rem;
+        margin-inline: 8rem;
+        margin-block: 2rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .form-p{
+        min-width: max-content;
+        margin-inline: 1rem;
+    }
+
+}
+@media (max-width:680px){
+    body{
+        background-image: url(./intro-component-with-signup-form-master/images/bg-intro-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    main{
+     grid-template-columns: auto;
+     margin: 1rem;
+     height: 100vh;
+     gap: 1rem;
+    
+    }
+    .container{
+        grid-template-columns: auto;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    .text-container{
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .text-container p{
+        line-height: 1.5rem;
+    }
+    .try{
+        padding-inline: 3rem;
+    }
+    .form{
+        padding: 1rem;
+        margin-bottom: 3rem;
+    }
+    .form-p{
+        padding: 1rem;
+        padding-block: 0;
+        text-align: center;
+    }
+
+}

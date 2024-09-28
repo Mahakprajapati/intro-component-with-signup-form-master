@@ -1,7 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: hsl(0, 100%, 74%);
     display: flex;
     justify-content: center;
@@ -9,22 +10,24 @@ body{
     min-height: 100vh;
 }
 
-main{
+main {
     position: absolute;
-    font-family: 'Poppins',sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-.container{
-    display: grid;   
+
+.container {
+    display: grid;
 }
-.text-container{
+
+.text-container {
     align-self: center;
 }
 
-.white{
+.white {
     color: #ffff;
 }
-.form{
-   
+
+.form {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -33,23 +36,24 @@ main{
     border-radius: 0.7rem;
     padding: 2rem;
     box-shadow: 0 0.5em 0 0 #0505051c;
-
 }
-.try{
+
+.try {
     padding-block: 1em;
     border-radius: 0.2rem;
-    background-color:  hsl(248, 32%, 49%);
+    background-color: hsl(248, 32%, 49%);
     text-align: center;
     font-weight: 600;
     box-shadow: 0 0.5em 0 0 #0505051c;
     margin-bottom: 2rem;
 }
-.try span{
+
+.try span {
     font-weight: normal;
     color: #ffffffb5;
-
 }
-.form input{
+
+.form input {
     padding-block: 1em;
     padding-inline: 1rem;
     font-weight: 700;
@@ -58,7 +62,8 @@ main{
     border: 0.1rem solid hsl(246, 25%, 77%);
     width: 100%;
 }
-button{
+
+button {
     display: block;
     text-decoration: none;
     background-color: hsl(154, 59%, 51%);
@@ -69,37 +74,43 @@ button{
     font-weight: 700;
     margin-bottom: 0;
     border: none;
-    border-bottom:3px solid hsl(154, 60%, 36%);
+    border-bottom: 3px solid hsl(154, 60%, 36%);
 }
-button:hover{
+
+button:hover {
     background-color: hsla(154, 59%, 51%, 0.781);
     cursor: pointer;
-
 }
 
-.placeholder  input::placeholder{
-   visibility: hidden;
+.placeholder input::placeholder {
+    visibility: hidden;
 }
 
-.form-p{
+.form-p {
     font-size: 0.75rem;
     margin-top: 0;
     color: hsl(246, 25%, 77%);
 }
-.form-p span{
-    color: hsl(0, 100%, 74%) ;
+
+.form-p span {
+    color: hsl(0, 100%, 74%);
 }
-.First-Name,.Last-Name,.Email-address,.password{
+
+.First-Name,
+.Last-Name,
+.Email-address,
+.password {
     position: relative;
 }
 
-.icon-error{
+.icon-error {
     position: absolute;
     top: 0.6rem;
     right: 1rem;
     display: none;
 }
-.error{
+
+.error {
     position: absolute;
     right: 1rem;
     top: 3rem;
@@ -109,79 +120,89 @@ button:hover{
     display: none;
 }
 
-.uncompleted .icon-error,.uncompleted .error{
+.uncompleted .icon-error,
+.uncompleted .error {
     display: block;
 }
 
-.uncompleted .error-input{
-border: 0.1rem solid  hsl(0, 100%, 74%);
+.uncompleted .error-input {
+    border: 0.1rem solid hsl(0, 100%, 74%);
 }
 
-.input-border:focus{
-    border:0.1rem solid  hsl(248, 32%, 49%);
+.input-border:focus {
+    border: 0.1rem solid hsl(248, 32%, 49%);
 }
 
-@media(min-width:679px){
-    body{
+@media (min-width: 679px) {
+    body {
         background-image: url(./intro-component-with-signup-form-master/images/bg-intro-desktop.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         height: 100vh;
     }
-    .container{
+
+    .container {
         grid-template-columns: auto auto;
         gap: 2rem;
         margin-inline: 8rem;
         margin-block: 2rem;
     }
-    h1{
+
+    h1 {
         font-size: 3rem;
     }
-    .form-p{
+
+    .form-p {
         min-width: max-content;
         margin-inline: 1rem;
     }
-
 }
-@media (max-width:680px){
-    body{
+
+@media (max-width: 680px) {
+    body {
         background-image: url(./intro-component-with-signup-form-master/images/bg-intro-mobile.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
     }
-    main{
-     grid-template-columns: auto;
-     margin: 1rem;
-     height: 100vh;
-     gap: 1rem;
-    
+
+    main {
+        grid-template-columns: auto;
+        margin: 1rem;
+        height: 100vh;
+        gap: 1rem;
     }
-    .container{
+
+    .container {
         grid-template-columns: auto;
     }
-    h1{
+
+    h1 {
         font-size: 1.5rem;
     }
-    .text-container{
+
+    .text-container {
         text-align: center;
         margin-top: 3rem;
     }
-    .text-container p{
+
+    .text-container p {
         line-height: 1.5rem;
     }
-    .try{
+
+    .try {
         padding-inline: 3rem;
     }
-    .form{
+
+    .form {
         padding: 1rem;
         margin-bottom: 3rem;
     }
-    .form-p{
+
+    .form-p {
         padding: 1rem;
         padding-block: 0;
         text-align: center;
     }
-
 }
